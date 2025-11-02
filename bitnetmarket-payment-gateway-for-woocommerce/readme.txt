@@ -1,5 +1,5 @@
 === BitnetMarket Payment Gateway for WooCommerce ===
-Contributors: bitnetmarket
+Contributors: znxn7717
 Tags: woocommerce, bitnetmarket, gateway, payment gateway, cryptocurrency
 Donate link: https://github.com/znxn7717/bitnetmarket-payment-gateway-for-woocommerce
 Version: 1.0.0
