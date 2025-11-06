@@ -1,10 +1,11 @@
 <?php
 /*
-Plugin Name: BitnetMarket Payment Gateway for WooCommerce
-Plugin URI: https://github.com/znxn7717/bitnetmarket-payment-gateway-for-woocommerce
-Description: درگاه پرداخت بیت‌نت‌مارکت امکان پذیرش پرداخت‌های رمزارزی را به سادگی و امنیت به فروشگاه شما اضافه می‌کند. با استفاده از این افزونه می‌توانید رمزارزهای مختلف را به عنوان روش پرداخت در فروشگاه خود فعال کرده و تجربه خریدی مدرن، سریع و بدون مرز برای مشتریان‌تان فراهم کنید
+Plugin Name: Payment Gateway with BitnetMarket for WooCommerce
+Plugin URI: https://github.com/znxn7717/payment-gateway-with-bitnetmarket-for-woocommerce
+Description: The BitnetMarket payment gateway adds the ability to accept cryptocurrency payments to your store simply and securely. With this plugin, you can enable various cryptocurrencies as a payment method on your site and provide your customers with a modern, fast, and borderless shopping experience. درگاه پرداخت بیت‌نت‌مارکت امکان پذیرش پرداخت‌های رمزارزی را به سادگی و امنیت به فروشگاه شما اضافه می‌کند. با استفاده از این افزونه می‌توانید رمزارزهای مختلف را به عنوان روش پرداخت در سایت خود فعال کرده و تجربه خریدی مدرن، سریع و بدون مرز برای مشتریان‌تان فراهم کنید
 Version: 1.0.0
 Author: znxn7717
+Requires Plugins: woocommerce
 Tested up to: 6.8
 WC tested up to: 10.2
 License: GPLv3 or later
@@ -15,8 +16,8 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('WOO_BITNETMARKET_DIR', plugin_dir_path(__FILE__));
-define('WOO_BITNETMARKET_URL', plugin_dir_url(__FILE__));
+define('BMWOO_BITNETMARKET_DIR', plugin_dir_path(__FILE__));
+define('BMWOO_BITNETMARKET_URL', plugin_dir_url(__FILE__));
 
 function load_bitnetmarket_woo_gateway() {
     add_filter('woocommerce_payment_gateways', 'woocommerce_add_bitnetmarket_gateway');
@@ -24,7 +25,7 @@ function load_bitnetmarket_woo_gateway() {
         $methods[] = 'WC_Gateway_Bitnetmarket';
         return $methods;
     }
-    require_once(WOO_BITNETMARKET_DIR . 'class-wc-gateway-bitnetmarket.php');
+    require_once(BMWOO_BITNETMARKET_DIR . 'class-wc-gateway-bitnetmarket.php');
 }
 add_action('plugins_loaded', 'load_bitnetmarket_woo_gateway', 0);
 
@@ -40,7 +41,7 @@ function bitnetmarket_register_payment_method_type() {
     if (!class_exists('Automattic\WooCommerce\Blocks\Payments\Integrations\AbstractPaymentMethodType')) {
         return;
     }
-    require_once WOO_BITNETMARKET_DIR . 'class-block.php';
+    require_once BMWOO_BITNETMARKET_DIR . 'class-block.php';
     add_action(
         'woocommerce_blocks_payment_method_type_registration',
         function (Automattic\WooCommerce\Blocks\Payments\PaymentMethodRegistry $payment_method_registry) {

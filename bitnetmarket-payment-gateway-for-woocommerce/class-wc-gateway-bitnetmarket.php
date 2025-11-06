@@ -15,7 +15,7 @@ if (class_exists('WC_Payment_Gateway') && !class_exists('WC_Gateway_Bitnetmarket
             $this->id = 'bitnetmarket';
             $this->method_title = __('بیت‌نت‌مارکت', 'bitnetmarket-payment-gateway-for-woocommerce');
             $this->method_description = __('تنظیمات درگاه پرداخت بیت‌نت‌مارکت برای ووکامرس', 'bitnetmarket-payment-gateway-for-woocommerce');
-            $this->icon = apply_filters('woo_bitnetmarket_logo', WOO_BITNETMARKET_URL . 'assets/images/icon.png');
+            $this->icon = apply_filters('bmwoo_bitnetmarket_logo', BMWOO_BITNETMARKET_URL . 'assets/images/icon.png');
             $this->has_fields = false;
             $this->supports = array('products');
 
@@ -47,7 +47,7 @@ if (class_exists('WC_Payment_Gateway') && !class_exists('WC_Gateway_Bitnetmarket
 
         public function init_form_fields() {
             $this->form_fields = apply_filters(
-                'WC_Bitnetmarket_Config',
+                'BMWOO_Bitnetmarket_Config',
                 array(
                     'enabled' => array(
                         'title' => __('فعالسازی/غیرفعالسازی', 'bitnetmarket-payment-gateway-for-woocommerce'),
@@ -108,7 +108,7 @@ if (class_exists('WC_Payment_Gateway') && !class_exists('WC_Gateway_Bitnetmarket
             $woocommerce->session->order_id_bitnetmarket = $order_id;
             $order = wc_get_order($order_id);
             $currency = $order->get_currency();
-            $currency = apply_filters('WC_Bitnetmarket_Currency', $currency, $order_id);
+            $currency = apply_filters('BMWOO_Bitnetmarket_Currency', $currency, $order_id);
 
             $amount = intval($order->get_total());
             $amount = apply_filters('woocommerce_order_amount_total_IRANIAN_gateways_before_check_currency', $amount, $currency);
@@ -148,7 +148,7 @@ if (class_exists('WC_Payment_Gateway') && !class_exists('WC_Gateway_Bitnetmarket
             );
 
             $description = 'خریدار : ' . $order->get_billing_first_name() . ' ' . $order->get_billing_last_name();
-            $description = apply_filters('WC_Bitnetmarket_Description', $description, $order_id);
+            $description = apply_filters('BMWOO_Bitnetmarket_Description', $description, $order_id);
 
             $response = $this->send_payment_request($amount, $callback_url);
 
