@@ -20,7 +20,7 @@ This plugin connects to BitnetMarket to create and verify cryptocurrency payment
 
 It sends the seller_id, amount and callback URL when a customer places an order, and the payment UUID when checking the payment status.
 
-This service is provided by BitnetMarket: https://help.bitnetmarket.com/terms-of-use (terms of service) and https://seller.bitnetmarket.com (Seller Panel) and  https://www.postman.com/bitnetmarket/public/overview (API Docs).
+This service is provided by BitnetMarket: https://help.bitnetmarket.com/terms-of-use (terms of service) and https://seller.bitnetmarket.com (Seller Panel) and https://www.postman.com/bitnetmarket/public/overview (API Docs).
 
 == Installation ==
 
