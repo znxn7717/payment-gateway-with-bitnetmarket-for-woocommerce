@@ -6,7 +6,7 @@ Description: The BitnetMarket payment gateway adds the ability to accept cryptoc
 Version: 1.0.0
 Author: znxn7717
 Requires Plugins: woocommerce
-Tested up to: 6.8
+Tested up to: 6.9
 WC tested up to: 10.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html

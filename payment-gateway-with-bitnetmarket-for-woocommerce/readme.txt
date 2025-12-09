@@ -3,7 +3,7 @@ Contributors: znxn7717
 Tags: woocommerce, bitnetmarket, gateway, payment gateway, cryptocurrency
 Donate link: https://github.com/znxn7717/payment-gateway-with-bitnetmarket-for-woocommerce
 Version: 1.0.0
-Tested up to: 6.8
+Tested up to: 6.9
 Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
@@ -24,10 +24,7 @@ This service is provided by BitnetMarket: https://help.bitnetmarket.com/terms-of
 
 == Installation ==
 
-1. Upload the `payment-gateway-with-bitnetmarket-for-woocommerce` folder to `/wp-content/plugins/`.
-2. Activate the plugin.
-3. In WooCommerce > Settings > Payments > BitnetMarket, enter your seller ID.
-
-1. پوشه `payment-gateway-with-bitnetmarket-for-woocommerce` را در `/wp-content/plugins/` آپلود کنید.
-2. افزونه را فعال کنید.
-3. در WooCommerce > Settings > Payments > Bitnetmarket شناسه فروشنده را وارد کنید.
+1. To install manually, download the plugin from https://github.com/znxn7717/payment-gateway-with-bitnetmarket-for-woocommerce.
+2. Upload the `payment-gateway-with-bitnetmarket-for-woocommerce` folder to `/wp-content/plugins/`.
+3. Activate the plugin.
+4. In WooCommerce > Settings > Payments > BitnetMarket, enter your seller ID.
